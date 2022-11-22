@@ -1,23 +1,24 @@
-
+import React from 'react';
 import './App.css';
-import Cartwidget from './components/navbar/cartwidget';
-import NavBar from './components/navbar/navBar';
 import ItemListContainer from './itemList/itemListContainer';
+import { BrowserRouter , Routes ,Route } from 'react-router-dom'
+import Navbar from './components/navbar/navBar';
+import ItemDetailContainer from './itemDetail/itemDetailContainter';
 
-function App() {
+
+function App() { 
   return (
-   <>
-      <div className='titulo'>
-          <h1>Las Macetas De Sandri</h1>
-      </div>
-      <div className='nav'>
-        <NavBar/>
-      </div>
-      <div className='titulo'>
-      <ItemListContainer greeting="Bienvenidos al E-Commerce de tomi"/>
-      </div>
-     
-   </>
+    
+   <BrowserRouter>
+    <Navbar />
+      <Routes>
+            <Route path='/' element={<ItemListContainer/>} />
+            <Route path='/category/:idCategory' element={<ItemListContainer/>} />
+            <Route path='/category/:idItem' element={<ItemDetailContainer/>} />
+
+            <Route path='*' element={<h1>ERROR 404!</h1> } />
+      </Routes>
+   </BrowserRouter>
   );
 }
 

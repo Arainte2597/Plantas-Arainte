@@ -1,21 +1,34 @@
 import React from 'react'
 import Cartwidget from './cartwidget';
+import {Link} from "react-router-dom"
+import "./navbar.css"
 
 function Navbar() {
   return (
-    <nav>
+
+    <nav className='nav-menu'>
        
-        <ul>
+        <ul className='nav-list'>
             <li>
-                <a href="/"> <Cartwidget/>Plantas</a>
+                <Link to="/">
+                    <img className='logo' src="http://decidite.com/upload/image/600x6001290742194_autoshop.jpg" alt="car-logo" />
+                </Link>
+            </li>
+            <li>
+                <Link to="/">
+                    <h2>TOM'S CARS</h2>
+                </Link>
+            </li>
+            <li>
+                <Link to="/">Inicio</Link>
                 
             </li>
             <li>
-                <a href="/"> <Cartwidget/>Abono</a>
+                <Link to="/category/Ford"> <Cartwidget/>Ford</Link>
                
             </li>
             <li>
-                <a href="/"> <Cartwidget/>Macetas</a>
+                <Link to="/category/Toyota"> <Cartwidget/>Toyota</Link>
                 
             </li>
         </ul>

@@ -37,12 +37,15 @@
   }
 }
 body{
-  background-image: url(https://images.unsplash.com/photo-1491146179969-d674118945ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG9zJTIwZGUlMjBwbGFudGFzfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
-  background-repeat: no-repeat;
-  background-size: cover
+background-color: black
   ;
 }
-nav a{
+h1{
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+/* nav a{
   text-decoration:none;
   color:inherit;
   font-size:14px;
@@ -63,6 +66,6 @@ nav a{
     text-align: center;
     color: white;
   }
-  .nav{
-    text-align: center;
-  }
+  nav{
+   text-align: center;
+  } */
